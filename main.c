@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #include "hash_funcs.h"
 #include "hash_tables.h"
@@ -83,7 +84,16 @@ int main(){
         printf("\nEnter key to search: ");
         fgets(key, KEYSIZE, stdin);
         key[strcspn(key, "\n")] = '\0';
+
+        float sec_4_search;
+        clock_t start, end;
+        start = clock();
+
         student = Find(table, key);
+
+        end = clock();
+        sec_4_search = (float)(end - start)/CLOCKS_PER_SEC;
+
         
         printf("Selected hash function and key: %s, %s\n\n", opts[choice], key);
         printf("Rec: ");
@@ -91,10 +101,11 @@ int main(){
             printf("Nothing found with this key\n");
 
         else
-            printf("%-30s | %-15s | %-11s | %-5.2f\n", student->name, student->faculty, student->group, student->GPA);
+            printf("%-25s | %-15s | %-11s | %-5.2f\n", student->name, student->faculty, student->group, student->GPA);
         
 
         printf("\nCollision: %ld\n", table->collisions);
+        printf("\nSearching complited within %.4f\n", sec_4_search);
 
 
     } while (1);
