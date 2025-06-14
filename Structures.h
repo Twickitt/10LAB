@@ -2,8 +2,7 @@
 #define STRUCTURES_H
 
 
-typedef unsigned long long hash_type;
-typedef hash_type (*hash_func_type)(const char*);
+
 
 typedef struct{
     char name[30];

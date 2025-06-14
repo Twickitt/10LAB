@@ -5,13 +5,11 @@
 
 
 
-HashTable* New_Table(long int numbers, const hash_func_type hash_func);
+HashTable* New_Table(const long numbers, const hash_func_type hash_func);
 
-HashTable* Find_Slot(HashTable *table, char *key, long int id);
+Hash* Find_Slot(HashTable* hash_table, long idx, char* key);
 
-int Find(HashTable *table, char *key);
-
-void Remove_By_Key(HashTable *table, char *key);
+void* Find(HashTable* hash_table, char* key);
 
 void Increase_Table(HashTable* table, char* key, void* value);
 

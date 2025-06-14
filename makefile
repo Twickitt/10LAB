@@ -1,5 +1,5 @@
 Gc = gcc
-Sources = main.o hash_tables.o hash_funcs.o Generate_And_Print.o
+Sources = main.o hash_tables.o hash_funcs.o Generate_And_Print_List.o
 
 all: base 
 
@@ -19,8 +19,8 @@ hash_funcs.o: hash_funcs.c
 		$(Gc) -c hash_funcs.c
 
 
-Generate_And_Print.o: Generate_And_Print.c
-		$(Gc) -c Generate_And_Print.c
+Generate_And_Print.o: Generate_And_Print_List.c
+		$(Gc) -c Generate_And_Print_List.c
 
 clean:
 		rm -rf *.o base

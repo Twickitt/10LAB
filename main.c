@@ -43,17 +43,17 @@ int main(){
 
     
     HashTable* table = NULL;
-
+    
+    Student *student = NULL;
 
 
 
     do {
-        printf("\n1. Linear Search\n");
-        printf("2. Binary Tree Search\n");
-        printf("3. Red Black Search\n");
-        printf("4. Linear Search With Any Case\n");
-        printf("5. Binary Tree Search With Any Case\n");
-        printf("0. Exit\n");
+        printf("\n0. ROT13_hash1\n");
+        printf("1. FNV_hash2\n");
+        printf("2. Bad_hash3\n");
+        printf("3. My_hash4\n");
+        printf("4. Exit\n");
         printf("Select Action: ");
 
         if (scanf("%d", &choice) != 1) {
@@ -62,12 +62,12 @@ int main(){
             continue;
         }
 
-        if (choice < 0 || choice > 5) {
+        if (choice < 0 || choice > 4) {
             printf("You entered wrong number\n");
             continue;
         }
 
-        if (choice == 0)
+        if (choice == 4)
             break;
 
         if(table)
@@ -83,19 +83,29 @@ int main(){
         printf("\nEnter key to search: ");
         fgets(key, KEYSIZE, stdin);
         key[strcspn(key, "\n")] = '\0';
-        int x = Find(table, key);
+        student = Find(table, key);
         
-        if (x != -1)
-            printf("First appearance of the key \'%s\' is in the index=%d\n", key, x);
-        else    
-            printf("There is nothing with such key in this list\n");
+        printf("Selected hash function and key: %s, %s\n\n", opts[choice], key);
+        printf("Rec: ");
+        if(student == NULL)
+            printf("Nothing found with this key\n");
+
+        else
+            printf("%-30s | %-15s | %-11s | %-5.2f\n", student->name, student->faculty, student->group, student->GPA);
+        
+
+        printf("\nCollision: %ld\n", table->collisions);
 
 
     } while (1);
 
     free(s);
-    Free_Table(table);
-
+        
+    if(table!= NULL){    
+        Free_Table(table);
+        table = NULL;
+    }
+    return 0;
 }
 
 
