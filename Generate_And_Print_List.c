@@ -10,43 +10,43 @@ int Generate_List(Student* arr, int n){
 
     
     const char *names[] = {
-        "Aleksandr", "Dmitriy", "Mikhail", "Anna", "Pavel",
-        "Ekaterina", "Artem", "Olga", "Denis", "Igor",
-        "Maria", "Vladimir", "Tatiana", "Stanislav", "Irina",
-        "Andrei", "Grigoriy", "Elena", "Vitaliy", "Yulia",
-        "Anton", "Darya", "Nikita", "Veronika", "Vadim",
-        "Alina", "Roman", "Kristina", "Artyom", "Marina",
-        "Elizaveta", "Denis", "Anastasiya", "Pavel", "Viktoriya",
-        "Igor", "Yana", "Maksim", "Darya", "Anton",
-        "Ekaterina", "Andrei", "Olga", "Mikhail", "Anna",
-        "Denis", "Irina", "Pavel"
+        "Aleksandr", "Dmitriy", "Mikhail", "Pavel", "Artem",
+        "Denis", "Igor", "Vladimir", "Stanislav", "Andrei",
+        "Grigoriy", "Vitaliy", "Anton", "Nikita", "Vadim",
+        "Roman", "Artyom", "Maksim", "Yaroslav", "Sergey",
+        "Timofey", "Yegor", "Oleg", "Konstantin", "Ruslan",
+        "Bogdan", "Stepan", "Gleb", "Evgeniy", "Semyon",
+        "Vasiliy", "Boris", "Viktor", "Alexey", "Valentin",
+        "Leonid", "German", "Mark", "Fedor", "Yuriy",
+        "Arkadiy", "Kirill", "Anatoliy", "Ilya", "Platon",
+        "Ignat", "Rodion", "Nazar"
     };
     
     const char *surnames[] = {
-        "Ivanov", "Petrov", "Sidorov", "Kozlova", "Smirnov",
-        "Volkova", "Fedorov", "Morozova", "Pavlov", "Gusev",
-        "Kuznetsova", "Nikolaev", "Orlova", "Borisov", "Egorova",
-        "Klimenko", "Zaitsev", "Vinogradova", "Sokolov", "Belova",
-        "Karpov", "Golubeva", "Tarasov", "Kovaleva", "Melnikov",
-        "Savchenko", "Frolov", "Gavrilova", "Kazakov", "Polyakova",
-        "Yakovleva", "Gorshkov", "Bogdanova", "Korneev", "Romanova",
-        "Semyonov", "Kulikova", "Grachev", "Potapova", "Krylov",
-        "Filippova", "Belyaev", "Davydova", "Kuzmin", "Sorokina",
-        "Tkachev", "Kiseleva", "Mironov"
+        "Ivanov", "Petrov", "Sidorov", "Smirnov", "Fedorov",
+        "Pavlov", "Gusev", "Nikolaev", "Borisov", "Egorov",
+        "Klimenko", "Zaitsev", "Sokolov", "Karpov", "Tarasov",
+        "Melnikov", "Frolov", "Kazakov", "Yakovlev", "Gorshkov",
+        "Korneev", "Semyonov", "Grachev", "Krylov", "Belyaev",
+        "Kuzmin", "Mironov", "Tkachev", "Sorokin", "Filippov",
+        "Belov", "Kuznetsov", "Gavrilov", "Polyakov", "Romanov",
+        "Savin", "Lebedev", "Panin", "Volkov", "Orlov",
+        "Titov", "Stepanov", "Vinokurov", "Zhdanov", "Chernov",
+        "Loginov", "Shestakov", "Bogdanov"
     };
 
     
     const char *patronymics[] = {
-        "Andreevich", "Sergeevich", "Vladimirovich", "Nikolaevna", "Olegovich",
-        "Dmitrievna", "Igorevich", "Viktorovna", "Konstantinovich", "Petrovich",
-        "Alekseevna", "Andreevich", "Sergeevna", "Dmitrievich", "Olegovna",
-        "Nikolaevich", "Vladimirovich", "Pavlovna", "Igorevich", "Mikhailovna",
-        "Vadimovich", "Andreevna", "Sergeevich", "Dmitrievna", "Olegovich",
-        "Nikolaevna", "Vladimirovich", "Igorevna", "Pavlovich", "Viktorovna",
-        "Andreevna", "Sergeevich", "Dmitrievna", "Olegovich", "Nikolaevna",
-        "Vladimirovich", "Igorevna", "Petrovich", "Alekseevna", "Dmitrievich",
-        "Sergeevna", "Nikolaevich", "Vladimirovna", "Igorevich", "Pavlovna",
-        "Olegovich", "Andreevna", "Viktorovich"
+        "Andreevich", "Sergeevich", "Vladimirovich", "Nikolaevich", "Olegovich",
+        "Dmitrievich", "Igorevich", "Viktorovich", "Konstantinovich", "Petrovich",
+        "Alekseevich", "Pavlovich", "Yurievich", "Evgenievich", "Leonidovich",
+        "Valentinovich", "Anatolievich", "Alexeevich", "Fedorovich", "Borisovich",
+        "Romanovich", "Grigorievich", "Timofeevich", "Bogdanovich", "Arkadievich",
+        "Vasilievich", "Semenovich", "Platonovich", "Yaroslavovich", "Rodionovich",
+        "Nazarovich", "Glebovich", "Germanovich", "Ignatovich", "Markovich",
+        "Kirillovich", "Olegovich", "Stepanovich", "Denisovich", "Ruslanovich",
+        "Georgievich", "Stanislavovich", "Andrianovich", "Maximovich", "Svyatoslavovich",
+        "Vadimovich", "Ilyich", "Artemovich"
     };
     
     const char *faculties[] = {
