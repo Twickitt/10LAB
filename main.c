@@ -6,13 +6,18 @@
 #include "hash_funcs.h"
 #include "hash_tables.h"
 #include "Generate_And_Print_List.h"
+#include "Save_To_CSV.h"
 
 #define KEYSIZE 200
+#define AMMOUNT_OF_LAPS 27
+
 
 int main(){
 
     char key[KEYSIZE];
     int count, choice;
+    float times[AMMOUNT_OF_LAPS];
+    int collisions_counter[AMMOUNT_OF_LAPS];
     
     
     while (1) {
@@ -74,6 +79,9 @@ int main(){
         if(table)
             Free_Table(table);
 
+        if(student)
+            free(student);
+
         table = New_Table(count*2, Func_Choice(choice));
 
         for (int i = 0; i < count; i++) 
@@ -110,12 +118,76 @@ int main(){
 
     } while (1);
 
+
+    // getchar();
+    // printf("\nEnter key to search: ");
+    // fgets(key, KEYSIZE, stdin);
+    // key[strcspn(key, "\n")] = '\0';
+    
+
+
+
+    // for (int i = 0; i < 4; i++) {
+
+    //     if(table)
+    //         Free_Table(table);
+
+    //     if(student)
+    //         free(student);
+        
+
+    //     clock_t start, end;
+        
+    //     start = clock();
+        
+    //     table = New_Table(count*2, Func_Choice(i));
+
+    //     for (int i = 0; i < count; i++) 
+    //         Increase_Table(table, s[i].name, &s[i]);
+        
+        
+    //     student = Find(table, key);
+
+    //     end = clock();
+
+    //     times[i] = (float)(end - start) / CLOCKS_PER_SEC;
+    //     collisions_counter[i] = table->collisions;
+        
+        
+    //     if (times[i] < 0 || times[i] > 1000)  
+    //         printf("Warning: algo %d time suspicious: %.6f\n", i, times[i]);
+
+    //     printf("\nSelected hash function and key: %s, %s\n", opts[i], key);
+    //     printf("Rec: ");
+        
+    //     if(student == NULL)
+    //         printf("Nothing found with this key\n");
+
+    //     else
+    //         printf("%-25s | %-15s | %-11s | %-5.2f\n", student->name, student->faculty, student->group, student->GPA);
+        
+
+    //     printf("Collision: %ld\n", table->collisions);
+
+        
+    //     printf("%d Hash function searching time results: %.4f\n", i, times[i]);
+
+
+    // }
+        
+
+    // printf("\nSaving to CSV... \n");
+    // save_times_all_algorithms("Data.csv", count, times, collisions_counter, 4);
+
+    
     free(s);
+    free(student);
         
     if(table!= NULL){    
         Free_Table(table);
         table = NULL;
     }
+
     return 0;
 }
 
